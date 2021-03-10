@@ -23,11 +23,12 @@ const {img, name, seller, price, stock,key} = props.product;
             <p>${price}</p>
             
             <p><small>only {stock} left in stock - order soon </small></p>
-            <button 
+            {props.showAddToCart &&<button 
             className="main-button"
             onClick={() => props.handleAddProduct(props.product)}
             >
-                <FontAwesomeIcon icon={faShoppingCart} /> add to cart</button>
+                <FontAwesomeIcon icon={faShoppingCart} /> add to cart
+                </button>}
 
             </div>
             
